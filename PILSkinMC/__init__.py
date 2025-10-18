@@ -7,7 +7,7 @@ from typing import Union
 
 from . import poses
 
-_DEFAULT_SCALE = 32
+_DEFAULT_SCALE = 64
 
 
 def _iso_coords(x: Union[int | float], y: Union[int | float], scale: int) -> tuple[int | float, int | float]:
@@ -38,7 +38,7 @@ def paste_skin(image: Image.Image, skin: Image.Image, xy: tuple[int], scale: int
         image (Image.Image): Image to paste onto.
         skin (Image.Image): Skin image to paste.
         xy (tuple[int]): Position to paste at.
-        scale: (int): Scale to render at, recommended to be a power of 2. Defaults to 32.
+        scale: (int): Scale to render at, recommended to be a power of 2. Defaults to 64.
         pose (list, optional): Pose for the skin, also used to define skin type (SLIM/WIDE). Defaults to poses.WIDE.
     """
     for skin_pos, dest_pos, shading in pose:
@@ -81,7 +81,7 @@ def skin_get_bbox(scale: int = _DEFAULT_SCALE) -> tuple[int]:
     """Get the bounding box of a skin render based on its scale
 
     Args:
-        scale (int, optional): Scale for rendering skin at. Defaults to 32.
+        scale (int, optional): Scale for rendering skin at. Defaults to 64.
 
     Returns:
         tuple[int]: Bounding box of skin render.

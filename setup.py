@@ -25,5 +25,5 @@ setup(
         'Natural Language :: English',
         'Operating System :: OS Independent',
     ],
-    requires=['Pillow', 'numpy']
+    install_requires=['Pillow', 'numpy']
 )
