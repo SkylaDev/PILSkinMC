@@ -50,7 +50,7 @@ By default the `paste_skin()` function will presume skins are of the wide 4px ar
 
 ## Scaling
 
-By default the `paste_skin()` function will render skins at a scale of `32`, this is the size of the theoretical isometric grid that the skin is being rendered off of. To change it simply parse a `scale` with any integer value.
+By default the `paste_skin()` function will render skins at a scale of `64`, this is the size of the theoretical isometric grid that the skin is being rendered off of. To change it simply parse a `scale` with any integer value.
 
 **Note:** It is recommended to only use scales that are powers of 2 (4, 8, 16, 32, 64, 128, etc) as irregular values can sometimes cause gaps in the resulting image.
 
