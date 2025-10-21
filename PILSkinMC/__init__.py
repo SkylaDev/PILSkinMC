@@ -51,12 +51,12 @@ def paste_skin(image: Image.Image, skin: Image.Image, xy: tuple[int], scale: int
         
         # Calculate position to paste part at
         _pos = [_iso_coords(*xy, scale=scale) for xy in dest_pos]
-        pos = [(x + xy[0], y + xy[1]) for x, y, in _pos]
+        pos = [(round(x + xy[0]), round(y + xy[1])) for x, y, in _pos]
         
-        min_x = int(min(x for x, _ in pos))
-        min_y = int(min(y for _, y in pos))
-        max_x = int(max(x for x, _ in pos))
-        max_y = int(max(y for _, y in pos))
+        min_x = round(min(x for x, _ in pos))
+        min_y = round(min(y for _, y in pos))
+        max_x = round(max(x for x, _ in pos))
+        max_y = round(max(y for _, y in pos))
         
         local_pos = [(x - min_x, y - min_y) for x, y in pos]
         coeffs = _find_coeffs(p_coords, local_pos)
