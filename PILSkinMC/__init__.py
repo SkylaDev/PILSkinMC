@@ -1,5 +1,5 @@
 __slots__ = ['poses', 'paste_skin', 'skin_get_bbox']
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 
 import numpy
 from PIL import Image, ImageEnhance
